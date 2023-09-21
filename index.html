@@ -17,34 +17,40 @@
       rel="stylesheet"
     />
     <link href="src/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="overview">
-            <h1>Joburg</h1>
+            <h1 id="city"></h1>
             <ul>
-              <li>Monday</li>
-              <li>Clear</li>
+              <li id="date">Monday</li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
-            <div class="col-3">
+            <div class="col-6">
               <div class="d-flex weather-temp">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                  alt="Weather img"
-                  target="_blank"
-                />
-                <strong>16</strong> C|F
+                <div class="temp-icon">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                    alt="Weather img"
+                    target="_blank"
+                  />
+                </div>
+                <div class="temperature-info">
+                  <strong id="temperature"></strong>
+                  <span class="units">℃ | <a href="#">℉</a></span>
+                </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-6">
               <ul>
-                <li>Precipitation:0</li>
-                <li>Humudity:0</li>
-                <li>Wind:0</li>
+                <li id="precipitation">Precipitation:0</li>
+                <li id="humidity">Humudity:0</li>
+                <li id="wind">Wind:0</li>
               </ul>
             </div>
           </div>
