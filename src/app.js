@@ -25,8 +25,6 @@ function formDate(timestamp) {
 
 /*Axios will call this function and will get the response from the api*/
 function displayTemperature(response) {
-  console.log(response.data);
-
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
